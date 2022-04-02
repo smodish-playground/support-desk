@@ -4,6 +4,7 @@ import { toast } from 'react-toastify'
 import { useSelector, useDispatch } from 'react-redux'
 import { register, reset } from '../features/auth/authSlice'
 
+import Spinner from '../components/Spinner'
 import { FaUser } from 'react-icons/fa'
 
 function Register() {
@@ -55,6 +56,10 @@ function Register() {
       ...prevState,
       [e.target.id]: e.target.value,
     }))
+  }
+
+  if (isLoading) {
+    return <Spinner />
   }
 
   return (
