@@ -75,7 +75,7 @@ const createTicket = asyncHandler(async (req, res) => {
   res.status(200).json(ticket)
 })
 
-// @desc    Get user ticket
+// @desc    Updates a user ticket
 // @route   PUT /api/tickets/:id
 // @access  Private
 const updateTicket = asyncHandler(async (req, res) => {
